@@ -1,0 +1,22 @@
+{
+  "name": "bloodbank-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -n frontend,backend -c green,blue \"npm run dev --prefix BloodBankSystem\" \"PORT=5002 npm run dev --prefix BloodBankSystem/backend\"",
+    "start": "concurrently -n frontend,backend -c green,blue \"npm run dev --prefix BloodBankSystem\" \"PORT=5002 npm run dev --prefix BloodBankSystem/backend\"",
+    "frontend": "npm run dev --prefix BloodBankSystem",
+    "backend": "PORT=5002 npm run dev --prefix BloodBankSystem/backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
